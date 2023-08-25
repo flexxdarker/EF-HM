@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HM18._08._2023.Entities
+namespace HM16._08._2023.Entities
 {
-    public class Country
-    { 
+    public class Categories
+    {
         public int Id { get; set; }
         public string Name { get; set; }
     }

@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace HM18._08._2023.Entities
 {
-    internal class Airplanes
+    public class Airplanes
     {
+        public int Id { get; set; }
+        public string Model { get; set; }
+        public string Type { get; set; }
+        public int MaxPassengers { get; set; }
+        public int CountryId { get; set; }
+        public Country Country { get; set; }
     }
 }
