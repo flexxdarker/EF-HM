@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace HM16._08._2023.Entities
 {
-    internal class Tracks
+    public class Tracks
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Duration { get; set; }
+        public int AlbumsId { get; set; }
+        public Albums Albums { get; set; }
     }
 }

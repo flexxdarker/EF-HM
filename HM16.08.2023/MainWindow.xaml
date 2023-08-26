@@ -1,0 +1,23 @@
+﻿<Window x:Class="HM16._08._2023.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HM16._08._2023"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <ComboBox DockPanel.Dock="Top">
+                <ComboBoxItem Name = "Albums" Selected="Albums_Selected">Show All Albums</ComboBoxItem>
+                <ComboBoxItem Name = "Artists" Selected="Artists_Selected">Show All Artists</ComboBoxItem>
+                <ComboBoxItem Name = "Playlists" Selected="Playlists_Selected">Show All Playlists</ComboBoxItem>
+                <ComboBoxItem Name = "Tracks" Selected="Tracks_Selected">Show All Tracks</ComboBoxItem>
+            </ComboBox>
+        <ComboBox DockPanel.Dock="Top">
+            <ComboBoxItem Name = "AddPlaylists" IsSelected = "False" Selected="AddPlaylists_Selected">Add Playlists</ComboBoxItem> 
+        </ComboBox>
+        <Grid DockPanel.Dock="Top">
+            <DataGrid x:Name="DataGrid"/>
+        </Grid>
+    </DockPanel>
+</Window>

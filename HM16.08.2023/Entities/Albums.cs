@@ -10,7 +10,7 @@ namespace HM16._08._2023.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public int ArtistId { get; set; }
+        public int ArtistsId { get; set; }
         public Artists Artists { get; set; }
         public int Year { get; set; }
         public int GanreId { get; set; }

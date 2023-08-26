@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace HM16._08._2023.Entities
 {
-    internal class Countries
+    public class Countries
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }
