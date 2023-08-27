@@ -1,4 +1,5 @@
 ﻿using HM16._08._2023.Data;
+using Microsoft.EntityFrameworkCore;
 using PropertyChanged;
 using System;
 using System.Collections.Generic;
@@ -27,31 +28,39 @@ namespace HM16._08._2023
         {
             InitializeComponent();
             db = new();
+            
         }
 
         private void Albums_Selected(object sender, RoutedEventArgs e)
         {
-            DataGrid.ItemsSource = db.Albums;
+            db.Albums.Include(x => x.Artists)
+                     .Include(x => x.Ganre);
+            DataGrid.ItemsSource = db.Albums.ToList();
         }
 
         private void Artists_Selected(object sender, RoutedEventArgs e)
         {
-            DataGrid.ItemsSource= db.Artists;
+            db.Artists.Include(x => x.Countries);
+            DataGrid.ItemsSource= db.Artists.ToList();
         }
 
         private void Playlists_Selected(object sender, RoutedEventArgs e)
         {
-            DataGrid.ItemsSource = db.Playlists;
+            db.Artists.Include(x => x.Countries);
+            DataGrid.ItemsSource = db.Playlists.ToList();
         }
 
         private void Tracks_Selected(object sender, RoutedEventArgs e)
         {
-            DataGrid.ItemsSource = db.Tracks;
+            db.Tracks.Include(x => x.Albums);
+            DataGrid.ItemsSource = db.Tracks.ToList();
         }
 
-        private void AddPlaylists_Selected(object sender, RoutedEventArgs e)
+        private void addPlaylist_Click(object sender, RoutedEventArgs e)
         {
-
+            AddPlaylist addPlaylist = new AddPlaylist();
+            addPlaylist.ShowDialog();
+            db.SaveChanges();
         }
     }
 }

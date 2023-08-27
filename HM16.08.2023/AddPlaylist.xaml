@@ -1,0 +1,29 @@
+﻿<Window x:Class="HM16._08._2023.AddPlaylist"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HM16._08._2023"
+        mc:Ignorable="d"
+        Title="AddPlaylist" Height="200" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Name" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="name" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Label Content="Tracks" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"/>
+        <TextBox x:Name="Tracks" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Label Content="Category" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2"/>
+        <TextBox x:Name="Category" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" />
+        <Button x:Name="Add" Grid.Column="1" Grid.Row="3" Click="Add_Click" >Add</Button>
+    </Grid>
+</Window>

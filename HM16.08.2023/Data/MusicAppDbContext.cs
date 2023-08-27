@@ -12,12 +12,12 @@ namespace HM16._08._2023.Data
     {
         public MusicAppDbContext() : base()
         {
-
+            
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            string conn = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;";
+            string conn = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=MusicApp;Integrated Security=True;Connect Timeout=30;";
             optionsBuilder.UseSqlServer(conn);
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -64,12 +64,12 @@ namespace HM16._08._2023.Data
                 new Playlists() {Id = 1, Name = "Chilling out", CategoryId = 2}
             });
         }
-        public DbSet<Albums> Albums;
-        public DbSet<Artists> Artists;
-        public DbSet<Playlists> Playlists;
-        public DbSet<Tracks> Tracks;
-        public DbSet<Categories> Categories;
-        public DbSet<Countries> Countries;
-        public DbSet<Ganres> Ganres;
+        public DbSet<Albums> Albums { get; set; }
+        public DbSet<Artists> Artists { get; set; }
+        public DbSet<Playlists> Playlists { get; set; }
+        public DbSet<Tracks> Tracks { get; set; }
+        public DbSet<Categories> Categories { get; set; }
+        public DbSet<Countries> Countries { get; set; }
+        public DbSet<Ganres> Ganres { get; set; }
     }
 }

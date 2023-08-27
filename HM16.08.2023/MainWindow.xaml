@@ -13,11 +13,9 @@
                 <ComboBoxItem Name = "Playlists" Selected="Playlists_Selected">Show All Playlists</ComboBoxItem>
                 <ComboBoxItem Name = "Tracks" Selected="Tracks_Selected">Show All Tracks</ComboBoxItem>
             </ComboBox>
-        <ComboBox DockPanel.Dock="Top">
-            <ComboBoxItem Name = "AddPlaylists" IsSelected = "False" Selected="AddPlaylists_Selected">Add Playlists</ComboBoxItem> 
-        </ComboBox>
+        <Button DockPanel.Dock="Top" x:Name="addPlaylist" Content="Add Playlist" Click="addPlaylist_Click"/>
         <Grid DockPanel.Dock="Top">
-            <DataGrid x:Name="DataGrid"/>
+            <DataGrid x:Name="DataGrid" />
         </Grid>
     </DockPanel>
 </Window>
