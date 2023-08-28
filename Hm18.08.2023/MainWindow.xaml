@@ -1,0 +1,20 @@
+﻿<Window x:Class="Hm18._08._2023.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hm18._08._2023"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <ComboBox DockPanel.Dock="Top">
+            <ComboBoxItem Name = "ShowAccounts" Selected="ShowAccounts_Selected">Show All Accounts</ComboBoxItem>
+            <ComboBoxItem Name = "ShowAirplanes" Selected="ShowAirplanes_Selected">Show All Airplanes</ComboBoxItem>
+            <ComboBoxItem Name = "ShowClients" Selected="ShowClients_Selected">Show All Clients</ComboBoxItem>
+            <ComboBoxItem Name= "ShowFlights" Selected="ShowFlights_Selected">Show All Flights</ComboBoxItem>
+        </ComboBox>
+        <Grid DockPanel.Dock="Top">
+            <DataGrid x:Name="DataGrid"/>
+        </Grid>
+    </DockPanel>
+</Window>
