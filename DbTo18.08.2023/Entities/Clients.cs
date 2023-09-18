@@ -10,14 +10,8 @@ namespace DbTo18._08._2023.Entities
     public class Clients
     {
         public int Id { get; set; }
-        [MaxLength(200)]
-        [Required]
         public string Name { get; set; }
-        [MaxLength(200)]
-        [Required]
         public string Surname { get; set; }
-        [MaxLength(200)]
-        [Required]
         public string Email { get; set; }
         public int SexsId { get; set; }
         public Sexs Sexs { get; set; }
